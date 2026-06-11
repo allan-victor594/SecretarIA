@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conectando SecretarIA...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+        body {
+            background: radial-gradient(circle at top right, #1e1b4b, #0f0b1b, #000000);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #6366f1;
+            filter: blur(150px);
+            border-radius: 50%;
+            top: 15%;
+            left: 20%;
+            opacity: 0.4;
+            z-index: 0;
+        }
+        body::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #d946ef;
+            filter: blur(150px);
+            border-radius: 50%;
+            bottom: 15%;
+            right: 20%;
+            opacity: 0.3;
+            z-index: 0;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 40px 30px;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #6366f1, #d946ef);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px auto;
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+        }
+        .icon {
+            font-size: 40px;
+            animation: pulse 2s infinite;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            background: linear-gradient(to right, #ffffff, #c7d2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+        p {
+            font-size: 15px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 14px;
+            background: #25d366;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="icon-container">
+            <span class="icon">💬</span>
+        </div>
+        <h1>Conectar Google Agenda</h1>
+        <p>Quase pronto! Clique no botão abaixo para abrir o WhatsApp e enviar o código de conexão para a SecretarIA.</p>
+        <a id="wa-btn" class="btn" href="#">
+            <span>Abrir WhatsApp e Enviar</span>
+        </a>
+    </div>
+
+    <script>
+        // Captura os parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        const state = urlParams.get('state'); // Formato esperado "user_phone:bot_phone"
+
+        if (code && state) {
+            const parts = state.split(':');
+            const userPhone = parts[0];
+            const botPhone = parts[1] || ""; // Caso não venha o bot_phone
+            
+            // Remove quaisquer caracteres não numéricos do telefone do bot
+            const finalBotPhone = botPhone.replace(/\D/g, "");
+            
+            // Codifica a mensagem
+            const message = `Confirmar_Conexao: ${code}`;
+            const waUrl = `https://api.whatsapp.com/send?phone=${finalBotPhone}&text=${encodeURIComponent(message)}`;
+            
+            // Atualiza o link do botão
+            const btn = document.getElementById('wa-btn');
+            btn.href = waUrl;
+            
+            // Tenta redirecionar automaticamente após 1.5 segundos
+            setTimeout(() => {
+                window.location.href = waUrl;
+            }, 1500);
+        } else {
+            document.querySelector('p').innerText = "Erro: Parâmetros de autenticação inválidos ou ausentes.";
+            document.getElementById('wa-btn').style.display = "none";
+        }
+    </script>
+</body>
+</html>

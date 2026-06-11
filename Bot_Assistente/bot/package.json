@@ -1,0 +1,16 @@
+{
+  "name": "secretaria-bot",
+  "version": "1.0.0",
+  "description": "SecretarIA — Bot WhatsApp com Google Agenda e Financeiro",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.6.1",
+    "form-data": "^4.0.0",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.23.0"
+  }
+}

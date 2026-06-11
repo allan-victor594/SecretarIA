@@ -1,0 +1,67 @@
+2026/06/04-21:26:26.025 47c4 Reusing MANIFEST C:\Users\miche\downloads\bot_assistente\bot\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/06/04-21:26:26.026 47c4 Recovering log #88
+2026/06/04-21:26:26.050 47c4 Reusing old log C:\Users\miche\downloads\bot_assistente\bot\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000088.log 
+2026/06/04-21:27:42.474 47d4 Level-0 table #95: started
+2026/06/04-21:27:42.526 47d4 Level-0 table #95: 1343892 bytes OK
+2026/06/04-21:27:42.529 47d4 Delete type=0 #88
+2026/06/04-21:27:42.531 47d4 Compacting 1@1 + 3@2 files
+2026/06/04-21:27:42.659 47d4 Generated table #96@1: 49319 keys, 2330256 bytes
+2026/06/04-21:27:42.746 47d4 Generated table #97@1: 29009 keys, 2166741 bytes
+2026/06/04-21:27:42.914 47d4 Generated table #98@1: 97403 keys, 2248717 bytes
+2026/06/04-21:27:42.934 47d4 Generated table #99@1: 9551 keys, 292769 bytes
+2026/06/04-21:27:42.934 47d4 Compacted 1@1 + 3@2 files => 7038483 bytes
+2026/06/04-21:27:42.935 47d4 compacted to: files[ 0 0 4 0 0 0 0 ]
+2026/06/04-21:27:42.960 47d4 Level-0 table #101: started
+2026/06/04-21:27:43.018 47d4 Level-0 table #101: 1345746 bytes OK
+2026/06/04-21:27:43.020 47d4 Delete type=2 #90
+2026/06/04-21:27:43.021 47d4 Delete type=2 #91
+2026/06/04-21:27:43.021 47d4 Delete type=2 #92
+2026/06/04-21:27:43.021 47d4 Delete type=0 #94
+2026/06/04-21:27:43.021 47d4 Delete type=2 #95
+2026/06/04-21:27:43.029 47d4 Compacting 1@1 + 4@2 files
+2026/06/04-21:27:43.179 47d4 Generated table #102@1: 74076 keys, 2353303 bytes
+2026/06/04-21:27:43.247 47d4 Generated table #103@1: 11349 keys, 2151934 bytes
+2026/06/04-21:27:43.422 47d4 Generated table #104@1: 82990 keys, 2227769 bytes
+2026/06/04-21:27:43.497 47d4 Level-0 table #107: started
+2026/06/04-21:27:43.546 47d4 Level-0 table #107: 1348806 bytes OK
+2026/06/04-21:27:43.548 47d4 Delete type=0 #100
+2026/06/04-21:27:43.626 47d4 Generated table #105@1: 73006 keys, 1794826 bytes
+2026/06/04-21:27:43.626 47d4 Compacted 1@1 + 4@2 files => 8527832 bytes
+2026/06/04-21:27:43.628 47d4 compacted to: files[ 1 0 4 0 0 0 0 ]
+2026/06/04-21:27:43.630 47d4 Moved #107 to level-1 1348806 bytes OK: files[ 0 1 4 0 0 0 0 ]
+2026/06/04-21:27:43.631 47d4 Compacting 1@1 + 4@2 files
+2026/06/04-21:27:43.798 47d4 Generated table #108@1: 96707 keys, 2248285 bytes
+2026/06/04-21:27:43.876 47d4 Generated table #109@1: 16470 keys, 2287333 bytes
+2026/06/04-21:27:43.960 47d4 Level-0 table #112: started
+2026/06/04-21:27:44.018 47d4 Level-0 table #112: 982660 bytes OK
+2026/06/04-21:27:44.020 47d4 Delete type=2 #96
+2026/06/04-21:27:44.021 47d4 Delete type=2 #97
+2026/06/04-21:27:44.021 47d4 Delete type=2 #98
+2026/06/04-21:27:44.021 47d4 Delete type=2 #99
+2026/06/04-21:27:44.021 47d4 Delete type=2 #101
+2026/06/04-21:27:44.021 47d4 Delete type=0 #106
+2026/06/04-21:27:44.064 47d4 Generated table #110@1: 49265 keys, 2181899 bytes
+2026/06/04-21:27:44.226 47d4 Generated table #113@1: 93787 keys, 2245566 bytes
+2026/06/04-21:27:44.291 47d4 Generated table #114@1: 41455 keys, 1063719 bytes
+2026/06/04-21:27:44.291 47d4 Compacted 1@1 + 4@2 files => 10026802 bytes
+2026/06/04-21:27:44.292 47d4 compacted to: files[ 1 0 5 0 0 0 0 ]
+2026/06/04-21:27:44.294 47d4 Delete type=2 #102
+2026/06/04-21:27:44.294 47d4 Delete type=2 #103
+2026/06/04-21:27:44.294 47d4 Delete type=2 #104
+2026/06/04-21:27:44.294 47d4 Delete type=2 #105
+2026/06/04-21:27:44.294 47d4 Delete type=2 #107
+2026/06/04-21:27:49.983 47d4 Moved #112 to level-1 982660 bytes OK: files[ 0 1 5 0 0 0 0 ]
+2026/06/04-21:27:50.674 47d4 Compacting 1@1 + 5@2 files
+2026/06/04-21:27:50.882 47d4 Generated table #115@1: 62340 keys, 2345832 bytes
+2026/06/04-21:27:50.941 47d4 Generated table #116@1: 8142 keys, 2141782 bytes
+2026/06/04-21:27:51.086 47d4 Generated table #117@1: 77333 keys, 2221608 bytes
+2026/06/04-21:27:51.250 47d4 Generated table #118@1: 93127 keys, 2244513 bytes
+2026/06/04-21:27:51.293 47d4 Generated table #119@1: 25591 keys, 687650 bytes
+2026/06/04-21:27:51.293 47d4 Compacted 1@1 + 5@2 files => 9641385 bytes
+2026/06/04-21:27:51.294 47d4 compacted to: files[ 0 0 5 0 0 0 0 ]
+2026/06/04-21:27:51.295 47d4 Delete type=2 #108
+2026/06/04-21:27:51.296 47d4 Delete type=2 #109
+2026/06/04-21:27:51.296 47d4 Delete type=2 #110
+2026/06/04-21:27:51.296 47d4 Delete type=2 #112
+2026/06/04-21:27:51.296 47d4 Delete type=2 #113
+2026/06/04-21:27:51.296 47d4 Delete type=2 #114
